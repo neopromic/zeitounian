@@ -9,6 +9,8 @@ import {
   Users,
   BriefcaseBusiness,
   Trophy,
+  Facebook,
+  Twitter,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -176,9 +178,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-4">
-        <h2 className="text-2xl font-bold tracking-tighter w-full text-center">Depoimentos</h2>
-
+      <section className="p-4 space-y-4">
+        <h2 className="text-2xl font-bold tracking-tighter w-full text-center">
+          Depoimentos
+        </h2>
+        <div className="rounded-md border h-24"></div>
+      </section>
+      <section className="bg-muted  p-4 ">
+        <h2 className="font-bold text-xl uppercase">Sobre nós</h2>
+        <p className="text-muted-foreground text-sm leading-relaxed">
+          "Pensamos que os melhores serviços e projetos depende do quanto
+          podemos captar das ideias de nossos clientes."
+        </p>
+        <div className="flex my-4 gap-2">
+          <Facebook
+            className="bg-background rounded-full p-2 text-blue-500 fill-blue-500"
+            size={32}
+          />
+          <Twitter
+            className="bg-background rounded-full p-2 text-blue-500 fill-blue-500"
+            size={32}
+          />
+        </div>
+        <div className="space-y-4">
+          <h3 className="uppercase font-bold text-xl">Contatos</h3>
+          <div className="bg-background w-full rounded p-4">
+            <h4>Telefone</h4>
+            <p>+55 11 4773-5569</p>
+          </div>
+          <div className="bg-background w-full rounded p-4">
+            <h4>Email</h4>
+            <p>Email: tecnologia@zeitounian.com.br</p>
+          </div>
+          <div className="bg-background w-full rounded p-4">
+            <h4>Localização</h4>
+            <p>
+              Rua Sgto. Antonio Vieira Noia, 106, sala 3 e 4, Cidade Saude,
+              Itapevi, São Paulo, Brasil.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
