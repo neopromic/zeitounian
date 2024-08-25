@@ -6,7 +6,8 @@ import { cn } from "./utils";
 const ChangeTextVariants = cva("text-primary w-full text-center select-none", {
   variants: {
     variant: {
-      default: "text-2xl font-extrabold tracking-tight leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-primary to-background",
+      default:
+        "text-2xl font-extrabold tracking-tight leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-primary to-background",
     },
   },
   defaultVariants: {
