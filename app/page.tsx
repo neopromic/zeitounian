@@ -187,7 +187,7 @@ export default function Home() {
       <section className="bg-muted  p-4 ">
         <h2 className="font-bold text-xl uppercase">Sobre nós</h2>
         <p className="text-muted-foreground text-sm leading-relaxed">
-          "Pensamos que os melhores serviços e projetos depende do quanto
+          Pensamos que os melhores serviços e projetos depende do quanto
           podemos captar das ideias de nossos clientes."
         </p>
         <div className="flex my-4 gap-2">
