@@ -82,17 +82,17 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
           <CalendarCheck />
-          <p>Clientes atendidos</p>
+          <p>Atendimentos realizados</p>
           <p>9850</p>
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
           <BriefcaseBusiness />
-          <p>Clientes atendidos</p>
+          <p>Maquinas reparadas</p>
           <p>8870</p>
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
           <Trophy />
-          <p>Clientes atendidos</p>
+          <p>Orçamentos enviados</p>
           <p>19830</p>
         </div>
       </section>
@@ -187,8 +187,8 @@ export default function Home() {
       <section className="bg-muted  p-4 ">
         <h2 className="font-bold text-xl uppercase">Sobre nós</h2>
         <p className="text-muted-foreground text-sm leading-relaxed">
-          Pensamos que os melhores serviços e projetos depende do quanto
-          podemos captar das ideias de nossos clientes.
+          Pensamos que os melhores serviços e projetos depende do quanto podemos
+          captar das ideias de nossos clientes.
         </p>
         <div className="flex my-4 gap-2">
           <Facebook
@@ -203,16 +203,18 @@ export default function Home() {
         <div className="space-y-4">
           <h3 className="uppercase font-bold text-xl">Contatos</h3>
           <div className="bg-background w-full rounded p-4">
-            <h4>Telefone</h4>
-            <p>+55 11 4773-5569</p>
+            <h4 className="font-semibold">Telefone</h4>
+            <p contentEditable className="select-all">
+              +55 11 4773-5569
+            </p>
           </div>
           <div className="bg-background w-full rounded p-4">
-            <h4>Email</h4>
-            <p>Email: tecnologia@zeitounian.com.br</p>
+            <h4 className="font-semibold">Email</h4>
+            <p contentEditable>Email: tecnologia@zeitounian.com.br</p>
           </div>
           <div className="bg-background w-full rounded p-4">
-            <h4>Localização</h4>
-            <p>
+            <h4 className="font-semibold">Localização</h4>
+            <p contentEditable>
               Rua Sgto. Antonio Vieira Noia, 106, sala 3 e 4, Cidade Saude,
               Itapevi, São Paulo, Brasil.
             </p>
