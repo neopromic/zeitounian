@@ -26,7 +26,7 @@ export default function Home() {
     <main className="scroll-smooth">
       <section className="flex flex-col py-12 px-4 justify-center items-center h-64 max-h-64 relative">
         <ChangingText text={Texts} />
-        <p className="text-muted-foreground leading-relaxed tracking-normal text-xs text-center">
+        <p className="text-muted-foreground leading-relaxed tracking-normal text-xs w-full text-center">
           Fornecemos serviços manutenção elétrica com equipe especializada.
         </p>
         <Button className="absolute bottom-2" variant={"blue"}>
