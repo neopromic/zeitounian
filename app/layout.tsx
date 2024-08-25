@@ -20,14 +20,14 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={inter.className}>
         <ThemeProvider
-        attribute="class"
-        defaultTheme="light"
-        enableSystem
-        enableColorScheme
-        storageKey="app-theme"
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          enableColorScheme
+          storageKey="app-theme"
         >
           <Header.Container />
-          {children}
+          <div className="scroll-smooth">{children}</div>
         </ThemeProvider>
       </body>
     </html>

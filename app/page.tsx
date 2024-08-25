@@ -8,7 +8,7 @@ import {
   ThumbsUp,
   Users,
   BriefcaseBusiness,
-  Trophy,p
+  Trophy,
 } from "lucide-react";
 
 const Texts = [
@@ -92,6 +92,14 @@ export default function Home() {
           <p>Clientes atendidos</p>
           <p>19830</p>
         </div>
+      </section>
+      <section className="flex flex-col items-center justify-center p-4">
+        <h2 className="font-semibold text-2xl tracking-tighter">Nossas principais áreas de atuação</h2>
+        <h3 className="tracking-wider dark:text-blue-300 text-blue-500 my-2 text-xs">Conheça alguns dos segmentos que atuamos</h3>
+        <p className="text-center text-xs text-muted-foreground">
+          A Zeitounian Tecnologia é hoje uma empresa de engenharia que atende
+          diversos segmentos do mercado com produtos e serviços especializados.
+        </p>
       </section>
     </main>
   );
