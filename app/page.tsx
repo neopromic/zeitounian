@@ -8,7 +8,7 @@ import {
   ThumbsUp,
   Users,
   BriefcaseBusiness,
-  Trophy,
+  Trophy,p
 } from "lucide-react";
 
 const Texts = [
