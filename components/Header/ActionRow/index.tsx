@@ -1,18 +1,18 @@
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
 import { ModeToggle } from "@/components/mode-toggle";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export const ActionRow = () => {
   return (
@@ -20,10 +20,9 @@ export const ActionRow = () => {
       <NavigationMenu className="hidden sm:hidden md:flex lg:flex">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Institucional</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <NavigationMenuLink>Link</NavigationMenuLink>
-            </NavigationMenuContent>
+            <Link href="/institucional">
+              <Button variant="ghost">Institucional</Button>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Serviços</NavigationMenuTrigger>
@@ -40,29 +39,28 @@ export const ActionRow = () => {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="md:hidden lg:hidden">
-
-      <Sheet>
-        <SheetTrigger className="border rounded-md p-2 hover:bg-muted">
-          <Menu size={20} />
-        </SheetTrigger>
-        <SheetContent className="flex flex-col">
+        <Sheet>
+          <SheetTrigger className="border rounded-md p-2 hover:bg-muted">
+            <Menu size={20} />
+          </SheetTrigger>
+          <SheetContent className="flex flex-col">
+            <Link href={"/institucional"}>
+              <Button className="w-64 text-start" variant={"outline"}>
+                Institucional
+              </Button>
+            </Link>
             <HoverCard>
-                <HoverCardTrigger className="border max-w-64 rounded p-2 hover:bg-muted cursor-pointer transition-all shadow-sm">
-                    Institucional
-                </HoverCardTrigger>
+              <HoverCardTrigger className="border max-w-64 text-center text-sm rounded p-2 hover:bg-muted cursor-pointer transition-all shadow-sm">
+                Serviços
+              </HoverCardTrigger>
             </HoverCard>
             <HoverCard>
-                <HoverCardTrigger className="border max-w-64 rounded p-2 hover:bg-muted cursor-pointer transition-all shadow-sm">
-                    Serviços
-                </HoverCardTrigger>
+              <HoverCardTrigger className="border max-w-64 text-center text-sm rounded p-2 hover:bg-muted cursor-pointer transition-all shadow-sm">
+                Produtos
+              </HoverCardTrigger>
             </HoverCard>
-            <HoverCard>
-                <HoverCardTrigger className="border max-w-64 rounded p-2 hover:bg-muted cursor-pointer transition-all shadow-sm">
-                    Produtos
-                </HoverCardTrigger>
-            </HoverCard>
-        </SheetContent>
-      </Sheet>
+          </SheetContent>
+        </Sheet>
       </div>
       <ModeToggle />
     </div>
