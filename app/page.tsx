@@ -13,12 +13,30 @@ import {
   Twitter,
 } from "lucide-react";
 import Image from "next/image";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Texts = [
   "SUPERVISÓRIO SCADA - INDÚSTRIA 4.0",
   "SERVIÇOS DE MANUTENÇÃO ELÉTRICA",
   "PROJETO ELÉTRICO",
   "MANUTENÇÃO DE NOBREAKS E ESTABILIZADORES",
+];
+
+const depoiments = [
+  {
+    id: 0,
+    name: "A Zeitounian há anos presta serviços em nossos nobreaks de 80 a 120 kva, mas em 2017 iniciamos um projeto para implantação de um sistema SCADA, a solução atendeu as espectativas da empresa.",
+  },
+  {
+    id: 1,
+    name: "A Zeitounian atende com a velocidade que nosso grupo necessita, estão sempre prontos para resolver nossas demandas e mantendo nossos nobreaks operacionais",
+  },
 ];
 
 export default function Home() {
@@ -76,22 +94,22 @@ export default function Home() {
       </section>
       <section className="lg:flex justify-center items-center gap-4">
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover hover:bg-blue-900 hover:text-primary-foreground  dark:hover:text-blue-50 select-none">
-          <Users />
+          <Users className="text-blue-500 dark:text-blue-200" />
           <p>Clientes atendidos</p>
           <p>1570</p>
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
-          <CalendarCheck />
+          <CalendarCheck className="text-blue-500 dark:text-blue-200" />
           <p>Atendimentos realizados</p>
           <p>9850</p>
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
-          <BriefcaseBusiness />
+          <BriefcaseBusiness className="text-blue-500 dark:text-blue-200" />
           <p>Maquinas reparadas</p>
           <p>8870</p>
         </div>
         <div className="flex flex-col items-center justify-center border p-4 my-4 lg:rounded-xl group hover:bg-blue-900 hover:text-primary-foreground dark:hover:text-blue-50 select-none">
-          <Trophy />
+          <Trophy className="text-blue-500 dark:text-blue-200" />
           <p>Orçamentos enviados</p>
           <p>19830</p>
         </div>
@@ -182,7 +200,27 @@ export default function Home() {
         <h2 className="text-2xl font-bold tracking-tighter w-full text-center">
           Depoimentos
         </h2>
-        <div className="rounded-md border h-24"></div>
+        <div className="px-12 py-4 overflow-hidden border rounded-md flex items-center justify-center h-96">
+          <Carousel className="w-full max-w-sm">
+            <CarouselContent className="-ml-1">
+              {depoiments.map((data) => (
+                <CarouselItem key={data.id} className="pl-1 md:basis-1/2 lg:basis-1/2 ">
+                  <div className="p-1">
+                    <Card className="min-h-full">
+                      <CardContent className="flex aspect-square items-center justify-center p-6 ">
+                        <p className="text-sm font-medium text-center ">
+                          {data.name}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
       </section>
       <section className="bg-muted  p-4 ">
         <h2 className="font-bold text-xl uppercase">Sobre nós</h2>
@@ -204,17 +242,21 @@ export default function Home() {
           <h3 className="uppercase font-bold text-xl">Contatos</h3>
           <div className="bg-background w-full rounded p-4">
             <h4 className="font-semibold">Telefone</h4>
-            <p contentEditable className="select-all">
-              +55 11 4773-5569
-            </p>
+            <p className="select-all">+55 11 4773-5569</p>
           </div>
           <div className="bg-background w-full rounded p-4">
             <h4 className="font-semibold">Email</h4>
-            <p contentEditable>Email: tecnologia@zeitounian.com.br</p>
+            <p>
+              Email:{" "}
+              <span className="text-blue-500 underline font-medium select-all">
+                {" "}
+                tecnologia@zeitounian.com.br
+              </span>
+            </p>
           </div>
           <div className="bg-background w-full rounded p-4">
             <h4 className="font-semibold">Localização</h4>
-            <p contentEditable>
+            <p className="select-all text-sm">
               Rua Sgto. Antonio Vieira Noia, 106, sala 3 e 4, Cidade Saude,
               Itapevi, São Paulo, Brasil.
             </p>
