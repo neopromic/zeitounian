@@ -20,6 +20,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { IDepoiments } from "@/types/depoiments.type";
 
 const Texts = [
   "SUPERVISÓRIO SCADA - INDÚSTRIA 4.0",
@@ -28,14 +29,26 @@ const Texts = [
   "MANUTENÇÃO DE NOBREAKS E ESTABILIZADORES",
 ];
 
-const depoiments = [
+const depoiments: IDepoiments[] = [
   {
     id: 0,
     name: "A Zeitounian há anos presta serviços em nossos nobreaks de 80 a 120 kva, mas em 2017 iniciamos um projeto para implantação de um sistema SCADA, a solução atendeu as espectativas da empresa.",
+    enginnerName: "Eng. Francis Domingues, Sercom.",
   },
   {
     id: 1,
     name: "A Zeitounian atende com a velocidade que nosso grupo necessita, estão sempre prontos para resolver nossas demandas e mantendo nossos nobreaks operacionais",
+    enginnerName: "Eng. Vinicius Ribeiro, Lojas Renner",
+  },
+  {
+    id: 2,
+    name: "Uma empresa com muita experiência quando o assunto é qualidade de energia para equipamentos médicos",
+    enginnerName: "Eng. André Schulz, Bracco Imaging",
+  },
+  {
+    id: 3,
+    name: "A Zeitounian está conosco há mais de 10 anos, sempre resolvendo os problemas de nossos equipamentos em diversos tipos de ambientes médicos.",
+    enginnerName: "Eng. Willian Nitta, Horiba Medical",
   },
 ];
 
@@ -201,14 +214,17 @@ export default function Home() {
           Depoimentos
         </h2>
         <div className="px-12 py-4 overflow-hidden border rounded-md flex items-center justify-center h-96">
-          <Carousel className="w-full max-w-sm">
+          <Carousel className="w-full max-w-sm h-full">
             <CarouselContent className="-ml-1">
               {depoiments.map((data) => (
-                <CarouselItem key={data.id} className="pl-1 md:basis-1/2 lg:basis-1/2 ">
+                <CarouselItem
+                  key={data.id}
+                  className="pl-1 md:basis-1/2 lg:basis-1/2 "
+                >
                   <div className="p-1">
-                    <Card className="min-h-full">
+                    <Card className="lg:h-80 md:h-80 flex items-center justify-center">
                       <CardContent className="flex aspect-square items-center justify-center p-6 ">
-                        <p className="text-sm font-medium text-center ">
+                        <p className="text-xs font-medium text-center ">
                           {data.name}
                         </p>
                       </CardContent>
