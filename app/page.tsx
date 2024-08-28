@@ -52,6 +52,16 @@ const depoiments: IDepoiments[] = [
   },
 ];
 
+const customersLogos = [
+  { id: 0, src: "/bracco_ico.png" },
+  { id: 1, src: "/horiba_ico.png" },
+  {
+    id: 2,
+    src: "/renner_ico.png",
+  },
+  { id: 3, src: "/sercom_ico.png" },
+];
+
 export default function Home() {
   return (
     <main className="scroll-smooth">
@@ -239,6 +249,18 @@ export default function Home() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+        </div>
+        <div className="flex gap-4 items-center justify-center py-4">
+          {customersLogos.map((data) => (
+            <Image
+              key={data.id}
+              src={data.src}
+              alt=""
+              width={1000}
+              height={1000}
+              className="size-24 bg-cover object-cover grayscale hover:grayscale-0 transition-all"
+            />
+          ))}
         </div>
       </section>
       <section className="bg-muted  p-4 ">
