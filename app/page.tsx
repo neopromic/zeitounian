@@ -223,9 +223,12 @@ export default function Home() {
                 >
                   <div className="p-1">
                     <Card className="lg:h-80 md:h-80 flex items-center justify-center">
-                      <CardContent className="flex aspect-square items-center justify-center p-6 ">
+                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6 relative space-y-2">
                         <p className="text-xs font-medium text-center ">
                           {data.name}
+                        </p>
+                        <p className="text-xs text-center bg-blue-500 text-blue-50 rounded-full px-2 md:px-0 lg:px-0">
+                          {data.enginnerName}
                         </p>
                       </CardContent>
                     </Card>
